@@ -6,7 +6,7 @@ const SectionAbout = () => {
   return (
     <Box
       sx={{
-        height: '60vh',
+        height: '70vh',
         width: '100%',
         background: theme.palette.background.paper,
       }}
@@ -47,6 +47,7 @@ const SectionAbout = () => {
               color: theme.palette.primary.main,
               fontWeight: '600',
               mb: '2rem',
+              fontSize: '2.5rem',
             }}
           >
             ¿Quién soy?

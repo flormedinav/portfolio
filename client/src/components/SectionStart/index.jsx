@@ -6,7 +6,6 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import profilePhoto from '../../assets/Perfil.png';
 
 const SectionStart = () => {
   const theme = useTheme();

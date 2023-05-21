@@ -15,26 +15,9 @@ import codeImage from '../../assets/code.jpg';
 const SectionImage = () => {
   const theme = useTheme();
   return (
-    // <Box
-    //   sx={{
-    //     height: '30vh',
-    //     width: '100%',
-    //     backgroundImage: `url(${codeImage})`,
-    //     overFlow: 'hidden',
-    //   }}
-    // >
-    //   <Box
-    //     sx={{
-    //       background:
-    //         'linear-gradient(270deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.20772058823529416) 100%)',
-    //     }}
-    //   >
-    //     <Container sx={{ pt: '5rem' }}></Container>
-    //   </Box>
-    // </Box>
     <Box
       sx={{
-        height: '30vh',
+        height: '20vh',
         width: '100%',
         position: 'relative',
         overflow: 'hidden',

@@ -6,7 +6,7 @@ const SectionAbout = () => {
   return (
     <Box
       sx={{
-        height: '70vh',
+        height: '60vh',
         width: '100%',
         background: theme.palette.background.paper,
       }}
@@ -25,15 +25,14 @@ const SectionAbout = () => {
             borderRadius: '30px',
             overflow: 'hidden',
             background:
-              'linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 76%)',
-            borderRadius: '50%',
+              'linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)',
+            // borderRadius: '50%',
           }}
         >
           <CardMedia
             component='img'
             src={profilePhoto}
             sx={{
-              width: 'auto',
               width: '390px',
               height: '400px',
             }}
@@ -50,7 +49,7 @@ const SectionAbout = () => {
               fontSize: '2.5rem',
             }}
           >
-            ¿Quién soy?
+            Sobre mi
           </Typography>
           <Typography
             variant='h4'
@@ -74,7 +73,10 @@ const SectionAbout = () => {
             </span>
             , entre otras.
           </Typography>
-          <Typography variant='subtitle1' sx={{ fontSize: '1.15rem' }}>
+          <Typography
+            variant='subtitle1'
+            sx={{ fontSize: '1.15rem', textAlign: 'justify' }}
+          >
             He participado en la realización de varios proyectos individuales y
             grupales, aplicando la metodología SCRUM con sprints semanales.
             Además de mi experiencia en desarrollo, también he desempeñado el

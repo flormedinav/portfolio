@@ -12,7 +12,7 @@ const SectionStart = () => {
   return (
     <Box
       sx={{
-        height: '70vh',
+        height: '80vh',
         width: '100%',
         background:
           // 'linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.2861519607843137) 100%)',
@@ -20,7 +20,7 @@ const SectionStart = () => {
       }}
     >
       <Container
-        sx={{ display: 'flex', justifyContent: 'space-between', pt: '100px' }}
+        sx={{ display: 'flex', justifyContent: 'space-between', pt: '200px' }}
       >
         <Box>
           <Typography

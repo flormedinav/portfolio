@@ -100,6 +100,10 @@ export const darkTheme = createTheme({
       paper: '#000000',
       default: '#0C0C0C',
     },
+    nav: {
+      main: 'rgba(0, 0, 0, 1)',
+      default: '#0C0C0C',
+    },
     section: {
       primary: '#313131',
       secondary: '#1C1C1C',

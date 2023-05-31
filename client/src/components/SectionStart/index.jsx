@@ -14,11 +14,11 @@ const SectionStart = () => {
   return (
     <Box
       sx={{
-        height: "80vh",
+        height: "75vh",
         width: "100%",
-        background:
-          //   // 'linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.2861519607843137) 100%)',
-          "linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.20772058823529416) 100%)",
+        // background:
+        //   //   // 'linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.2861519607843137) 100%)',
+        //   "linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.20772058823529416) 100%)",
       }}
     >
       <Container
@@ -38,8 +38,8 @@ const SectionStart = () => {
                 fontSize: "5rem",
               }}
             >
-              Hey
-              <span style={{ color: theme.palette.primary.main }}>!</span>
+              Hola
+              <span style={{ color: theme.palette.primary.main }}>!</span> 👋🏼
             </Typography>
             <Typography
               variant="h3"

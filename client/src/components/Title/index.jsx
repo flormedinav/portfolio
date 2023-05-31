@@ -1,16 +1,16 @@
-import { Typography, useTheme } from '@mui/material';
+import { Typography, useTheme } from "@mui/material";
 
 const Title = ({ text }) => {
   const theme = useTheme();
   return (
     <Typography
-      variant='h4'
+      variant="h4"
       sx={{
-        textTransform: 'uppercase',
-        color: theme.palette.primary.main,
-        fontWeight: '600',
-        mb: '2rem',
-        fontSize: '2.5rem',
+        textTransform: "uppercase",
+        // color: theme.palette.primary.main,
+        fontWeight: "600",
+        mb: "2rem",
+        fontSize: "2.5rem",
       }}
     >
       {text}

@@ -26,7 +26,7 @@ const SectionTech = () => {
   return (
     <Box
       sx={{
-        height: "50vh",
+        height: { xs: "auto", md: "50vh" },
         width: "100%",
         position: "relative",
         overflow: "hidden",
@@ -34,7 +34,7 @@ const SectionTech = () => {
     >
       <Box
         sx={{
-          position: "absolute",
+          position: { xs: "", md: "absolute" },
           top: 0,
           left: 0,
           height: "100%",
@@ -42,7 +42,7 @@ const SectionTech = () => {
         }}
       >
         <Container sx={{ overflow: "hidden", height: "100%", pt: "5rem" }}>
-          <Title text="tecnologías" />
+          <Title text="tecnologías 🦾" />
 
           <Box
             sx={{
@@ -58,12 +58,12 @@ const SectionTech = () => {
                 onMouseLeave={handleTechMouseLeave}
                 sx={{
                   p: "1rem",
-                  height: "100px",
+                  height: "90px",
                   display: "flex",
                   justifyContent: "center",
                   margin: "0.5rem",
                   marginBottom: "1rem",
-                  width: "120px",
+                  width: "100px",
                   position: "relative",
                 }}
               >

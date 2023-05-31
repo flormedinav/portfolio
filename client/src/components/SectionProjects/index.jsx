@@ -11,9 +11,25 @@ import Title from "../Title";
 import { projects } from "./projects";
 import PaginationComponent from "../Pagination";
 import SlideFavorites from "../SlideFavorites";
+import CardsProjects from "../CardsProjects";
+import { useState } from "react";
 
 const SectionProjects = () => {
   const theme = useTheme();
+  const projectsPerPage = 2; // Cantidad de proyectos por página
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageChange = (event, page) => {
+    setCurrentPage(page);
+  };
+
+  // Cálculo de los índices inicial y final para mostrar los proyectos en la página actual
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const endIndex = startIndex + projectsPerPage;
+
+  // Filtrar los proyectos según la página actual
+  const projectsToShow = projects.slice(startIndex, endIndex);
+
   return (
     <Box
       sx={{
@@ -27,99 +43,38 @@ const SectionProjects = () => {
         pb: "4rem",
       }}
     >
-      <Container
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
-        <Title text="Proyectos" />
+      <Container sx={{ width: "100%" }}>
+        <Title text="Proyectos 💻" />
         <Box
           sx={{
             display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "flex-start",
-            mb: "1rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          {projects.map(({ name, img, description, github }) => (
-            <Box
-              sx={{
-                m: "0.5rem",
-                p: "10px",
-                borderRadius: "10px",
-                width: "calc(50% - 1rem)",
-                // borderBottom: '1px solid',
-                // borderBottomColor: theme.palette.primary.main,
-                mb: "1.5rem",
-              }}
-            >
-              <Paper
-                elevation={5}
-                sx={{
-                  background: theme.palette.background.main,
-                  width: "100%",
-                  height: "420px",
-                  display: "flex",
-                  justifyContent: "center",
-                  mb: "1.25rem",
-                  "&:hover": {
-                    transform: "translateY(-4px)", // Cambia la posición vertical del elemento
-                  },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  src={img}
-                  sx={{ pt: "12%", pl: "5%", pr: "5%", pb: "12%" }}
-                />
-              </Paper>
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  fontWeight: "700",
-                  mb: "0.5rem",
-                  fontSize: "1.25rem",
-                  textTransform: "uppercase",
-                  color: theme.palette.primary.main,
-                }}
-              >
-                {name}
-              </Typography>
-              <Typography variant="subtitle1" sx={{ mb: "0.3rem" }}>
-                {description}
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                sx={{ color: "gray", fontSize: "0.75rem", mb: "1rem" }}
-              >
-                #Javscript #React #Redux #Node #Express
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "1rem",
-                  mt: "0.3rem",
-                  borderBottom: "1px solid transparent", // Línea inferior inicialmente transparente
-                  transition: "border-color 0.3s ease", // Transición suave para el cambio de color de la línea
-                  "&:hover": {
-                    borderBottomColor: theme.palette.primary.main,
-                  },
-                }}
-              >
-                <a
-                  href={github}
-                  target="back"
-                  style={{
-                    textDecoration: "none",
-                    color: theme.palette.primary.main,
-                  }}
-                >
-                  Ir al repositorio ➜
-                </a>
-              </Typography>
-            </Box>
-          ))}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              justifyContent: "space-between",
+              mb: "1rem",
+            }}
+          >
+            {projectsToShow.map(({ name, img, description, github }) => (
+              <CardsProjects
+                name={name}
+                description={description}
+                img={img}
+                github={github}
+              />
+            ))}
+          </Box>
+          <PaginationComponent
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+            totalPages={Math.ceil(projects.length / projectsPerPage)}
+          />
         </Box>
       </Container>
     </Box>

@@ -59,7 +59,7 @@ const SectionImage = () => {
             height: "100%",
             width: "100%",
             backgroundImage:
-              "linear-gradient(270deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.2) 100%)",
+              "linear-gradient(270deg, rgba(0,0,0,0) 51%, #16151B 100%)",
             zIndex: 2,
           }}
         />
@@ -67,6 +67,18 @@ const SectionImage = () => {
         <SlideTech techs={techBackend} />
         <SlideTech techs={tools} direction="left" />
         <SlideTech techs={agile} />
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            height: "100%",
+            width: "100%",
+            backgroundImage:
+              "linear-gradient(90deg, rgba(0,0,0,0) 51%, #16151B 100%)",
+            zIndex: 2,
+          }}
+        />
       </Box>
     </Box>
   );

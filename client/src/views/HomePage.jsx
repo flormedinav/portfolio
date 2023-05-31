@@ -11,9 +11,9 @@ const HomePage = () => {
   return (
     <Box>
       <SectionStart />
+      <SectionImage />
       <SectionAbout />
       <SectionTech />
-      <SectionImage />
       <SectionProjects />
       <SectionContact />
       <Footer />

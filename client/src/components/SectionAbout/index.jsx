@@ -26,10 +26,10 @@ const SectionAbout = () => {
           sx={{
             height: "100%",
             borderRadius: "30px",
-            overflow: "hidden",
+            // overflow: "hidden",
             background:
               "linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)",
-            // borderRadius: '50%',
+            borderRadius: "50%",
           }}
         >
           <CardMedia
@@ -47,13 +47,19 @@ const SectionAbout = () => {
             variant="h4"
             sx={{
               textTransform: "uppercase",
-              color: theme.palette.primary.main,
+              // color: theme.palette.primary.main,
               fontWeight: "600",
               mb: "2rem",
               fontSize: "2.5rem",
             }}
           >
-            Sobre mi
+            Sobre{" "}
+            <span
+              style={{ color: theme.palette.primary.main, fontWeight: "600" }}
+            >
+              mi
+            </span>
+            💚
           </Typography>
           <Typography
             variant="h4"
@@ -63,7 +69,12 @@ const SectionAbout = () => {
               fontSize: "1.5rem",
             }}
           >
-            Soy Florencia Medina, desarrolladora Web Full Stack.
+            Soy Florencia Medina,{" "}
+            <span
+              style={{ color: theme.palette.primary.main, fontWeight: "600" }}
+            >
+              desarrolladora Web Full Stack.
+            </span>
           </Typography>
           <Typography
             variant="subtitle1"
@@ -79,7 +90,7 @@ const SectionAbout = () => {
           </Typography>
           <Typography
             variant="subtitle1"
-            sx={{ fontSize: "1.15rem", textAlign: "justify" }}
+            sx={{ fontSize: "1rem", textAlign: "justify" }}
           >
             He participado en la realización de varios proyectos individuales y
             grupales, aplicando la metodología SCRUM con sprints semanales.

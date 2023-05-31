@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material';
 
-const SectionContact = () => {
+const Footer = () => {
   return (
     <Box
       sx={{
@@ -15,10 +15,10 @@ const SectionContact = () => {
       }}
     >
       <Container>
-        <Typography>Soy el contacto</Typography>
+        <Typography>Soy el footer</Typography>
       </Container>
     </Box>
   );
 };
 
-export default SectionContact;
+export default Footer;

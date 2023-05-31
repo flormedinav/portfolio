@@ -1,81 +1,85 @@
-import { Box, CardMedia, Container, Typography, useTheme } from '@mui/material';
-import profilePhoto from '../../assets/Perfil2.png';
+import { Box, CardMedia, Container, Typography, useTheme } from "@mui/material";
+import profilePhoto from "../../assets/Perfil2.png";
+import profilePhoto2 from "../../assets/perfil.png";
 
 const SectionAbout = () => {
   const theme = useTheme();
   return (
     <Box
       sx={{
-        height: '60vh',
-        width: '100%',
+        height: "70vh",
+        width: "100%",
         background: theme.palette.background.paper,
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
       }}
     >
       <Container
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          pt: '5rem',
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <Box
           sx={{
-            height: '100%',
-            borderRadius: '30px',
-            overflow: 'hidden',
+            height: "100%",
+            borderRadius: "30px",
+            overflow: "hidden",
             background:
-              'linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)',
+              "linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)",
             // borderRadius: '50%',
           }}
         >
           <CardMedia
-            component='img'
-            src={profilePhoto}
+            component="img"
+            // src={profilePhoto}
+            src={profilePhoto2}
             sx={{
-              width: '390px',
-              height: '400px',
+              width: "390px",
+              height: "400px",
             }}
           />
         </Box>
-        <Box sx={{ width: '700px', ml: '5rem' }}>
+        <Box sx={{ width: "700px", ml: "5rem" }}>
           <Typography
-            variant='h4'
+            variant="h4"
             sx={{
-              textTransform: 'uppercase',
+              textTransform: "uppercase",
               color: theme.palette.primary.main,
-              fontWeight: '600',
-              mb: '2rem',
-              fontSize: '2.5rem',
+              fontWeight: "600",
+              mb: "2rem",
+              fontSize: "2.5rem",
             }}
           >
             Sobre mi
           </Typography>
           <Typography
-            variant='h4'
+            variant="h4"
             sx={{
-              fontWeight: '600',
-              mb: '1rem',
-              fontSize: '1.5rem',
+              fontWeight: "600",
+              mb: "1rem",
+              fontSize: "1.5rem",
             }}
           >
             Soy Florencia Medina, desarrolladora Web Full Stack.
           </Typography>
           <Typography
-            variant='subtitle1'
-            sx={{ mb: '1rem', fontSize: '1.15rem' }}
+            variant="subtitle1"
+            sx={{ mb: "1rem", fontSize: "1.15rem" }}
           >
-            Cuento experiencia en proyectos utilizando tecnologías como{' '}
+            Cuento experiencia en proyectos utilizando tecnologías como{" "}
             <span
-              style={{ color: theme.palette.primary.main, fontWeight: '600' }}
+              style={{ color: theme.palette.primary.main, fontWeight: "600" }}
             >
               JavaScript, React.js, Redux, Node.js, Express y PostgreSQL
             </span>
             , entre otras.
           </Typography>
           <Typography
-            variant='subtitle1'
-            sx={{ fontSize: '1.15rem', textAlign: 'justify' }}
+            variant="subtitle1"
+            sx={{ fontSize: "1.15rem", textAlign: "justify" }}
           >
             He participado en la realización de varios proyectos individuales y
             grupales, aplicando la metodología SCRUM con sprints semanales.

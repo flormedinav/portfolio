@@ -51,7 +51,7 @@ const NavBar = ({ handleThemeChange }) => {
         position='fixed'
         sx={{
           background: 'transparent',
-          background: trigger ? `${theme.palette.nav.main}` : `transparent`,
+          // background: trigger ? `${theme.palette.nav.main}` : `transparent`,
           backdropFilter: trigger ? 'blur(20px)' : ``,
           boxShadow: trigger ? '' : 'none',
         }}
@@ -90,6 +90,7 @@ const NavBar = ({ handleThemeChange }) => {
               justifyContent: 'center',
               alignItems: 'center',
               width: '100%',
+              
             }}
           >
             <ButtonNav text='Inicio' />

@@ -1,0 +1,46 @@
+.slider {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider .slideTrack {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  -webkit-animation: scroll 25s linear infinite;
+  width: calc(200px * 12);
+}
+
+.slider .slide {
+  width: 200px;
+}
+
+.sliderBack {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.sliderBack .slideTrackBack {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  -webkit-animation: scroll 25s linear infinite;
+  width: calc(200px * 12);
+}
+
+.sliderBack .slideBack {
+  width: 200px;
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 6));
+    transform: translateX(calc(-200px * 6));
+  }
+}

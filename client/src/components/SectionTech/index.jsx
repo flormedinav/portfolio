@@ -2,218 +2,100 @@ import {
   Box,
   CardMedia,
   Container,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+  Paper,
   Typography,
   useTheme,
-} from '@mui/material';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import CircleIcon from '@mui/icons-material/Circle';
-import Title from '../Title';
-import {
-  techFrontend,
-  techBackend,
-  tools,
-  agile,
-  techAndImg,
-} from '../../texts/sectionTech';
-import codeImage from '../../assets/code.jpg';
+} from "@mui/material";
+import Title from "../Title";
+import { imagesTech } from "./images";
+import { useState } from "react";
+import { tech } from "../../texts/sectionTech";
 
 const SectionTech = () => {
   const theme = useTheme();
+  const [hoveredTech, setHoveredTech] = useState(null);
+
+  const handleTechMouseEnter = (tech) => {
+    setHoveredTech(tech);
+  };
+
+  const handleTechMouseLeave = () => {
+    setHoveredTech(null);
+  };
 
   return (
     <Box
       sx={{
-        height: '60vh',
-        width: '100%',
-        position: 'relative',
-        overflow: 'hidden',
+        height: "50vh",
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
-      {/* <img
-        src={codeImage}
-        alt='Imagen de fondo'
-        style={{
-          width: '100%',
-          opacity: 0.07,
-        }}
-      /> */}
       <Box
         sx={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
-          height: '100%',
-          width: '100%',
-          // backgroundImage:
-          //   'linear-gradient(270deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.2) 100%)',
+          height: "100%",
+          width: "100%",
         }}
       >
-        {' '}
-        <Container sx={{ pt: '5rem' }}>
-          <Title text='tecnologías' />
+        <Container sx={{ overflow: "hidden", height: "100%", pt: "5rem" }}>
+          <Title text="tecnologías" />
+
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
             }}
           >
-            <Box sx={{ mb: '1.5rem' }}>
-              <Typography
-                variant='h4'
+            {imagesTech.map(({ image, name }, index) => (
+              <Paper
+                component="div"
+                onMouseEnter={() => handleTechMouseEnter(image)}
+                onMouseLeave={handleTechMouseLeave}
                 sx={{
-                  fontWeight: '600',
-                  mb: '1rem',
-                  fontSize: '1.5rem',
+                  p: "1rem",
+                  height: "100px",
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "0.5rem",
+                  marginBottom: "1rem",
+                  width: "120px",
+                  position: "relative",
                 }}
               >
-                Frontend
-              </Typography>
-              <Box sx={{ mb: '1.5rem', display: 'flex' }}></Box>
-            </Box>
-
-            <Box sx={{ mb: '1.5rem' }}>
-              <Typography
-                variant='h4'
-                sx={{
-                  fontWeight: '600',
-                  mb: '1rem',
-                  fontSize: '1.5rem',
-                  color: theme.palette.primary.main,
-                }}
-              >
-                Backend
-              </Typography>
-              <Typography
-                variant='subtitle1'
-                sx={{
-                  fontSize: '1.1rem',
-                }}
-              >
-                Javascript{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>
-                Node.js{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>{' '}
-                Express.js{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>{' '}
-                PostgreSQL{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>{' '}
-                Sequelize{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>{' '}
-                Json Web Token{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>{' '}
-                Passport{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>{' '}
-                Swagger{' '}
-                <span
-                  style={{
-                    color: theme.palette.primary.main,
-                    fontWeight: '600',
-                  }}
-                >
-                  |
-                </span>{' '}
-                Joi.
-              </Typography>
-            </Box>
-
-            <Box sx={{ mb: '1.5rem' }}>
-              <Typography
-                variant='h4'
-                sx={{
-                  fontWeight: '600',
-                  mb: '1rem',
-                  fontSize: '1.5rem',
-                }}
-              >
-                Herramientas
-              </Typography>
-              <Typography
-                variant='subtitle1'
-                sx={{
-                  fontSize: '1.1rem',
-                }}
-              >
-                Javascript | HTML5 | CSS3 | Responsive Design | React.js | Redux
-                | Redux Toolkit | TanStack Query | Material UI | JQuery | AJAX |
-                Storybook.
-              </Typography>
-            </Box>
-            <Box>
-              <Typography
-                variant='h4'
-                sx={{
-                  fontWeight: '600',
-                  mb: '1rem',
-                  fontSize: '1.5rem',
-                }}
-              >
-                Ágil
-              </Typography>
-              <Typography
-                variant='subtitle1'
-                sx={{
-                  fontSize: '1.1rem',
-                }}
-              >
-                Javascript | HTML5 | CSS3 | Responsive Design | React.js | Redux
-                | Redux Toolkit | TanStack Query | Material UI | JQuery | AJAX |
-                Storybook.
-              </Typography>
-            </Box>
+                <CardMedia
+                  component="img"
+                  src={image}
+                  sx={{ width: "90px", objectFit: "contain" }}
+                />
+                {hoveredTech === image && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      // background: "rgba(0.086, 0.082, 0.106, 0.5)",
+                      backdropFilter: "blur(15px)",
+                      color: "#fff",
+                      fontSize: "1.1rem",
+                      fontWeight: "700",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    {name}
+                  </div>
+                )}
+              </Paper>
+            ))}
           </Box>
         </Container>
       </Box>

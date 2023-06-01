@@ -43,24 +43,33 @@ const SectionAbout = () => {
           />
         </Box>
         <Box sx={{ width: "700px", ml: "5rem" }}>
-          <Typography
-            variant="h4"
-            sx={{
-              textTransform: "uppercase",
-              // color: theme.palette.primary.main,
-              fontWeight: "600",
-              mb: "2rem",
-              fontSize: "2.5rem",
-            }}
-          >
-            Sobre{" "}
-            <span
-              style={{ color: theme.palette.primary.main, fontWeight: "600" }}
+          <Box sx={{ mb: "2rem" }}>
+            <Typography
+              variant="h4"
+              sx={{
+                textTransform: "uppercase",
+                // color: theme.palette.primary.main,
+                fontWeight: "600",
+                fontSize: "2.5rem",
+                mb: "0.5rem",
+              }}
             >
-              mi
-            </span>
-            💚
-          </Typography>
+              Sobre{" "}
+              <span
+                style={{ color: theme.palette.primary.main, fontWeight: "600" }}
+              >
+                mi
+              </span>
+            </Typography>
+            <Box
+              sx={{
+                width: "100px",
+                border: "2px solid",
+                borderColor: theme.palette.primary.main,
+              }}
+            ></Box>
+          </Box>
+
           <Typography
             variant="h4"
             sx={{

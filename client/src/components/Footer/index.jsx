@@ -1,22 +1,22 @@
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Typography, useTheme } from "@mui/material";
 
 const Footer = () => {
+  const theme = useTheme();
+  const currentYear = new Date().getFullYear();
   return (
     <Box
       sx={{
-        height: '25vh',
-        width: '100%',
-        // background: theme.palette.background.paper,
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        pt: '4rem',
-        pb: '4rem',
+        height: "15vh",
+        width: "100%",
+        background: theme.palette.background.paper,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        pt: "4rem",
+        pb: "4rem",
       }}
     >
-      <Container>
-        <Typography>Soy el footer</Typography>
-      </Container>
+      <Typography> Copyright © {currentYear} Florencia Medina.</Typography>
     </Box>
   );
 };

@@ -1,20 +1,36 @@
-import { Typography, useTheme } from "@mui/material";
+import { Typography, useTheme, Box } from "@mui/material";
 
 const Title = ({ text }) => {
   const theme = useTheme();
   return (
-    <Typography
-      variant="h4"
+    <Box
       sx={{
-        textTransform: "uppercase",
-        // color: theme.palette.primary.main,
-        fontWeight: "600",
         mb: "2rem",
-        fontSize: "2.5rem",
       }}
     >
-      {text}
-    </Typography>
+      <Typography
+        variant="h4"
+        sx={{
+          textTransform: "uppercase",
+          // color: theme.palette.primary.main,
+          fontWeight: "600",
+          mb: "0.5rem",
+          fontSize: "2.5rem",
+        }}
+      >
+        {text}
+        <span style={{ color: theme.palette.primary.main, fontWeight: "600" }}>
+          .
+        </span>
+      </Typography>
+      <Box
+        sx={{
+          width: "100px",
+          border: "2px solid",
+          borderColor: theme.palette.primary.main,
+        }}
+      ></Box>
+    </Box>
   );
 };
 

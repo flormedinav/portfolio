@@ -10,7 +10,6 @@ import {
 import Title from "../Title";
 import { projects } from "./projects";
 import PaginationComponent from "../Pagination";
-import SlideFavorites from "../SlideFavorites";
 import CardsProjects from "../CardsProjects";
 import { useState } from "react";
 
@@ -39,12 +38,12 @@ const SectionProjects = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        pt: "4rem",
-        pb: "4rem",
+        pt: "6rem",
+        pb: "6rem",
       }}
     >
       <Container sx={{ width: "100%" }}>
-        <Title text="Proyectos 💻" />
+        <Title text="Proyectos" />
         <Box
           sx={{
             display: "flex",

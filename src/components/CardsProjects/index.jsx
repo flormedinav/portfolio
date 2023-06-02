@@ -1,4 +1,11 @@
-import { Box, CardMedia, Paper, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  CardMedia,
+  Paper,
+  Typography,
+  useTheme,
+} from "@mui/material";
 
 const CardsProjects = ({ name, description, img, github, tech }) => {
   const theme = useTheme();
@@ -61,18 +68,7 @@ const CardsProjects = ({ name, description, img, github, tech }) => {
       >
         {tech}
       </Typography>
-      <Typography
-        sx={{
-          fontSize: "1rem",
-          mt: "0.3rem",
-          width: "139px",
-          borderBottom: "1px solid transparent", // Línea inferior inicialmente transparente
-          transition: "border-color 0.3s ease", // Transición suave para el cambio de color de la línea
-          "&:hover": {
-            borderBottomColor: theme.palette.primary.main,
-          },
-        }}
-      >
+      <Button variant="outlined">
         <a
           href={github}
           target="back"
@@ -83,7 +79,7 @@ const CardsProjects = ({ name, description, img, github, tech }) => {
         >
           Ir al repositorio ➜
         </a>
-      </Typography>
+      </Button>
     </Box>
   );
 };

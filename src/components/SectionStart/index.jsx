@@ -18,8 +18,8 @@ const SectionStart = () => {
         background:
           //   // 'linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.2861519607843137) 100%)',
           "linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.20772058823529416) 100%)",
-        pt: "13rem",
-        pb: "12rem",
+        pt: { xs: "9rem", md: "13rem" },
+        pb: { xs: "8rem", md: "12rem" },
       }}
     >
       <Container

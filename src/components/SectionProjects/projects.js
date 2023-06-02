@@ -1,8 +1,7 @@
-import imageDogsApp from "../../assets/dogsApp.png";
+import imageDogsApp from "../../assets/dogsApp2.PNG";
 import imageRickAndMorty from "../../assets/rickAndMorty.png";
-import imagePF from "../../assets/pf.PNG";
 import imageEloleros from "../../assets/inicioEloleros.PNG";
-import imageChocolate from "../../assets/chocolate.jpg";
+import imageChocolate from "../../assets/proyectoFinal2.png";
 import imagePortfolio from "../../assets/inicioPortfolio.PNG";
 import imageIPhone from "../../assets/inicioIPhone.PNG";
 

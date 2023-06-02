@@ -11,22 +11,20 @@ import Title from "../Title";
 import { projects } from "./projects";
 import PaginationComponent from "../Pagination";
 import CardsProjects from "../CardsProjects";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SectionProjects = () => {
   const theme = useTheme();
-  const projectsPerPage = 2; // Cantidad de proyectos por página
+  const projectsPerPage = 2;
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
   };
 
-  // Cálculo de los índices inicial y final para mostrar los proyectos en la página actual
   const startIndex = (currentPage - 1) * projectsPerPage;
   const endIndex = startIndex + projectsPerPage;
 
-  // Filtrar los proyectos según la página actual
   const projectsToShow = projects.slice(startIndex, endIndex);
 
   return (

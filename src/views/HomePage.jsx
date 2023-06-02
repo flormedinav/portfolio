@@ -6,6 +6,7 @@ import SectionImage from "../components/SectionImage";
 import SectionProjects from "../components/SectionProjects";
 import Footer from "../components/Footer";
 import SectionContact from "../components/SectionContact";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const HomePage = () => {
   return (

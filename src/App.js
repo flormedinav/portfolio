@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { darkTheme, lightTheme } from "./themes";
 import NavBar from "./components/NavBar";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const App = () => {
   const [theme, setTheme] = useState(darkTheme);
@@ -21,6 +22,7 @@ const App = () => {
         <CssBaseline />
         <NavBar />
         <HomePage />
+        <ScrollToTopButton />
       </ThemeProvider>
     </>
   );

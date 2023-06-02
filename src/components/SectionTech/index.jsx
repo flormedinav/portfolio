@@ -52,6 +52,7 @@ const SectionTech = () => {
           >
             {imagesTech.map(({ image, name }, index) => (
               <Paper
+                // elevation={4}
                 component="div"
                 onMouseEnter={() => handleTechMouseEnter(image)}
                 onMouseLeave={handleTechMouseLeave}

@@ -6,23 +6,22 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { useState } from "react";
 
 const CardsProjects = ({ name, description, img, github, tech }) => {
   const theme = useTheme();
+
   return (
     <Box
       sx={{
-        // mr: "1rem",
         p: "10px",
         borderRadius: "10px",
         width: { xs: "100%", md: "calc(50% - 1rem)" },
-        // borderBottom: '1px solid',
-        // borderBottomColor: theme.palette.primary.main,
         mb: "1.5rem",
       }}
     >
       <Paper
-        elevation={5}
+        elevation={6}
         sx={{
           background: theme.palette.background.main,
           width: "100%",
@@ -40,10 +39,7 @@ const CardsProjects = ({ name, description, img, github, tech }) => {
           src={img}
           sx={{
             objectFit: "contain",
-            // pl: { sm: "5%", md: "3%" },
-            // pr: { sm: "5%", md: "3%" },
-            pt: { sm: "5%" },
-            pb: { sm: "5%" },
+            width: "100%",
           }}
         />
       </Paper>

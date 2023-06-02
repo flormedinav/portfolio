@@ -60,12 +60,13 @@ const SectionProjects = () => {
               mb: "1rem",
             }}
           >
-            {projectsToShow.map(({ name, img, description, github }) => (
+            {projectsToShow.map(({ name, img, description, github, tech }) => (
               <CardsProjects
                 name={name}
                 description={description}
                 img={img}
                 github={github}
+                tech={tech}
               />
             ))}
           </Box>

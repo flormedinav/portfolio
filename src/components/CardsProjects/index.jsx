@@ -1,6 +1,6 @@
 import { Box, CardMedia, Paper, Typography, useTheme } from "@mui/material";
 
-const CardsProjects = ({ name, description, img, github }) => {
+const CardsProjects = ({ name, description, img, github, tech }) => {
   const theme = useTheme();
   return (
     <Box
@@ -24,11 +24,10 @@ const CardsProjects = ({ name, description, img, github }) => {
           justifyContent: "center",
           mb: "1.25rem",
           "&:hover": {
-            transform: "translateY(-4px)", // Cambia la posición vertical del elemento
+            transform: "translateY(-4px)",
           },
         }}
       >
-        {/*  pt: "12%", pl: "5%", pr: "5%", pb: "12%" */}
         <CardMedia
           component="img"
           src={img}
@@ -58,14 +57,15 @@ const CardsProjects = ({ name, description, img, github }) => {
       </Typography>
       <Typography
         variant="subtitle1"
-        sx={{ color: "gray", fontSize: "0.75rem", mb: "1rem" }}
+        sx={{ color: "gray", fontSize: "0.75rem", mb: "1rem", height: "50px" }}
       >
-        #Javscript #React #Redux #Node #Express
+        {tech}
       </Typography>
       <Typography
         sx={{
           fontSize: "1rem",
           mt: "0.3rem",
+          width: "139px",
           borderBottom: "1px solid transparent", // Línea inferior inicialmente transparente
           transition: "border-color 0.3s ease", // Transición suave para el cambio de color de la línea
           "&:hover": {

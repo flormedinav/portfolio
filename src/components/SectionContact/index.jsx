@@ -36,6 +36,7 @@ const SectionContact = () => {
             sx={{
               display: "flex",
               flexWrap: "wrap",
+              justifyContent: "center",
             }}
           >
             <a
@@ -43,7 +44,17 @@ const SectionContact = () => {
               target="_back"
               style={{ textDecoration: "none" }}
             >
-              <Button size="large" sx={{ mr: "1rem" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  mb: "1rem",
+                  mr: "1rem",
+                  width: "150px",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                }}
+              >
                 <LinkedInIcon
                   sx={{
                     color: theme.palette.primary.main,
@@ -65,7 +76,17 @@ const SectionContact = () => {
               target="_back"
               style={{ textDecoration: "none" }}
             >
-              <Button size="large" sx={{ mr: "1rem" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  mr: "1rem",
+                  width: "150px",
+                  width: "150px",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                }}
+              >
                 <GitHubIcon
                   sx={{
                     color: theme.palette.primary.main,
@@ -87,7 +108,17 @@ const SectionContact = () => {
               target="_back"
               style={{ textDecoration: "none" }}
             >
-              <Button size="large" sx={{ mr: "1rem" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  mr: "1rem",
+                  width: "150px",
+                  width: "150px",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                }}
+              >
                 <MailIcon
                   sx={{
                     color: theme.palette.primary.main,
@@ -109,7 +140,17 @@ const SectionContact = () => {
               target="_back"
               style={{ textDecoration: "none" }}
             >
-              <Button size="large" sx={{ mr: "1rem" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  mr: "1rem",
+                  width: "150px",
+                  width: "150px",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                }}
+              >
                 <CalendarMonthIcon
                   sx={{
                     color: theme.palette.primary.main,

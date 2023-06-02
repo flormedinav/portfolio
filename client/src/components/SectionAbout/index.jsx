@@ -1,6 +1,7 @@
 import { Box, CardMedia, Container, Typography, useTheme } from "@mui/material";
 import profilePhoto from "../../assets/Perfil2.png";
 import profilePhoto2 from "../../assets/perfil.png";
+import Title from "../Title";
 
 const SectionAbout = () => {
   const theme = useTheme();
@@ -44,30 +45,7 @@ const SectionAbout = () => {
         </Box>
         <Box sx={{ width: "700px", ml: "5rem" }}>
           <Box sx={{ mb: "2rem" }}>
-            <Typography
-              variant="h4"
-              sx={{
-                textTransform: "uppercase",
-                // color: theme.palette.primary.main,
-                fontWeight: "600",
-                fontSize: "2.5rem",
-                mb: "0.5rem",
-              }}
-            >
-              Sobre{" "}
-              <span
-                style={{ color: theme.palette.primary.main, fontWeight: "600" }}
-              >
-                mi
-              </span>
-            </Typography>
-            <Box
-              sx={{
-                width: "100px",
-                border: "2px solid",
-                borderColor: theme.palette.primary.main,
-              }}
-            ></Box>
+            <Title text="Sobre mi" />
           </Box>
 
           <Typography

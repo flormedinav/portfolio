@@ -14,147 +14,132 @@ const SectionContact = () => {
       sx={{
         height: "100%",
         width: "100%",
-        // background: theme.palette.background.paper,
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
         pt: "6rem",
         pb: "6rem",
       }}
     >
-      <Container>
-        <Title text="Contacto" />
-
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "column", md: "row" },
+          justifyContent: "space-between",
+        }}
+      >
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            flexDirection: "column",
+          }}
+        >
+          <Title text="Contacto" />
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+            }}
+          >
+            <a href="https://www.linkedin.com/in/flormedinav/" target="_back">
+              <Button size="large" sx={{ mr: "1rem" }}>
+                <LinkedInIcon
+                  sx={{
+                    color: theme.palette.primary.main,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    ml: "0.5rem",
+                    color: "white",
+                  }}
+                >
+                  LinkedIn
+                </Typography>
+              </Button>
+            </a>
+            <a href="https://github.com/flormedinav" target="_back">
+              <Button size="large" sx={{ mr: "1rem" }}>
+                <GitHubIcon
+                  sx={{
+                    color: theme.palette.primary.main,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    ml: "0.5rem",
+                    color: "white",
+                  }}
+                >
+                  Github
+                </Typography>
+              </Button>
+            </a>
+            <a href="mailto:flormedinav7@gmail.com" target="_back">
+              <Button size="large" sx={{ mr: "1rem" }}>
+                <MailIcon
+                  sx={{
+                    color: theme.palette.primary.main,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    ml: "0.5rem",
+                    color: "white",
+                  }}
+                >
+                  Mail
+                </Typography>
+              </Button>
+            </a>
+            <a
+              href="https://calendly.com/flormedinav/reunion?month=2023-06"
+              target="_back"
+            >
+              <Button size="large" sx={{ mr: "1rem" }}>
+                <CalendarMonthIcon
+                  sx={{
+                    color: theme.palette.primary.main,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    ml: "0.5rem",
+                    color: "white",
+                  }}
+                >
+                  Calendly
+                </Typography>
+              </Button>
+            </a>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            mt: { xs: "2rem", md: "" },
           }}
         >
           <Box
             sx={{
-              display: "flex",
+              width: "250px",
+              height: "250px",
+              // overflow: "hidden",
+              background:
+                "linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)",
+              borderRadius: "50%",
+              position: "absolute",
             }}
-          >
-            <Box
-              sx={{
-                mr: "1rem",
-              }}
-            >
-              <a href="https://www.linkedin.com/in/flormedinav/" target="_back">
-                <Button size="large">
-                  <LinkedInIcon
-                    sx={{
-                      color: theme.palette.primary.main,
-                    }}
-                  />
-                  <Typography
-                    sx={{
-                      ml: "0.5rem",
-                      color: "white",
-                    }}
-                  >
-                    LinkedIn
-                  </Typography>
-                </Button>
-              </a>
-            </Box>
-
-            <Box
-              sx={{
-                mr: "1rem",
-              }}
-            >
-              <a href="https://github.com/flormedinav" target="_back">
-                <Button size="large">
-                  <GitHubIcon
-                    sx={{
-                      color: theme.palette.primary.main,
-                    }}
-                  />
-                  <Typography
-                    sx={{
-                      ml: "0.5rem",
-                      color: "white",
-                    }}
-                  >
-                    Github
-                  </Typography>
-                </Button>
-              </a>
-            </Box>
-
-            <Box
-              sx={{
-                mr: "1rem",
-              }}
-            >
-              <a href="mailto:flormedinav7@gmail.com" target="_back">
-                <Button size="large">
-                  <MailIcon
-                    sx={{
-                      color: theme.palette.primary.main,
-                    }}
-                  />
-                  <Typography
-                    sx={{
-                      ml: "0.5rem",
-                      color: "white",
-                    }}
-                  >
-                    Mail
-                  </Typography>
-                </Button>
-              </a>
-            </Box>
-
-            <Box
-              sx={{
-                mr: "1rem",
-              }}
-            >
-              <a
-                href="https://calendly.com/flormedinav/reunion?month=2023-06"
-                target="_back"
-              >
-                <Button size="large">
-                  <CalendarMonthIcon
-                    sx={{
-                      color: theme.palette.primary.main,
-                    }}
-                  />
-                  <Typography
-                    sx={{
-                      ml: "0.5rem",
-                      color: "white",
-                    }}
-                  >
-                    Calendly
-                  </Typography>
-                </Button>
-              </a>
-            </Box>
-            <Box
-              sx={{
-                width: "350px",
-                height: "350px",
-                // overflow: "hidden",
-                background:
-                  "linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)",
-                borderRadius: "50%",
-              }}
-            >
-              <CardMedia
-                component="img"
-                // src={profilePhoto}
-                src={profilePhoto5}
-                sx={{
-                  width: "350px",
-                  height: "350px",
-                }}
-              />
-            </Box>
-          </Box>
+          ></Box>
+          <CardMedia
+            component="img"
+            // src={profilePhoto}
+            src={profilePhoto5}
+            sx={{
+              width: "300px",
+              height: "250px",
+              position: "relative",
+            }}
+          />
         </Box>
       </Container>
     </Box>

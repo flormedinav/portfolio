@@ -113,7 +113,6 @@ const SectionContact = () => {
         </Box>
         <Box
           sx={{
-            width: "100%",
             display: "flex",
             justifyContent: "center",
             mt: { xs: "2rem", md: "" },

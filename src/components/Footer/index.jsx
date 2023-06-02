@@ -6,14 +6,15 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        height: "15vh",
+        height: "auto",
+        width: "100%",
+        pb: "4rem",
+        pt: "4rem",
         width: "100%",
         background: theme.palette.background.paper,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        pt: "4rem",
-        pb: "4rem",
       }}
     >
       <Typography> Copyright © {currentYear} Florencia Medina.</Typography>

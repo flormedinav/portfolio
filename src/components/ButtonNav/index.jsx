@@ -8,6 +8,7 @@ const ButtonNav = ({ text, isActive }) => {
       sx={{
         color: isActive ? theme.palette.primary.main : "white",
         ml: "5px",
+        mb: { xs: "0.75rem", md: "0rem" },
       }}
     >
       {text}

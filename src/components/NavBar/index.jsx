@@ -15,7 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState, useEffect } from "react";
 import ButtonNav from "../ButtonNav";
 import { Link } from "react-scroll";
-// import NavBarDrawer from '../NavBarDrawer';
+import NavBarDrawer from "../NavBarDrawer";
 
 const NavBar = ({ handleThemeChange }) => {
   const theme = useTheme();
@@ -87,17 +87,22 @@ const NavBar = ({ handleThemeChange }) => {
             backgroundColor: "transparent",
           }}
         >
-          <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              width: "100%",
+              display: { xs: "flex", sm: "flex", md: "none" },
+              justifyContent: "flex-end",
+            }}
+          >
             <IconButton
               color="white"
               size="large"
               onClick={handleDrawerToggle}
               sx={{
                 border: "1px solid",
-                borderColor: "#BF9A56",
-                width: "42px",
-                height: "42px",
-                mt: "5px",
+                borderColor: theme.palette.primary.main,
+                width: "40px",
+                height: "40px",
               }}
             >
               <MenuIcon sx={{ color: "white" }} />
@@ -147,11 +152,11 @@ const NavBar = ({ handleThemeChange }) => {
         </Toolbar>
       </AppBar>
 
-      {/* <NavBarDrawer
+      <NavBarDrawer
         open={open}
         handleDrawerToggle={handleDrawerToggle}
         handleThemeChange={handleThemeChange}
-      /> */}
+      />
     </>
   );
 };

@@ -53,6 +53,7 @@ const SectionContact = () => {
                   sx={{
                     ml: "0.5rem",
                     color: "white",
+                    textDecoration: "none",
                   }}
                 >
                   LinkedIn
@@ -74,6 +75,7 @@ const SectionContact = () => {
                   sx={{
                     ml: "0.5rem",
                     color: "white",
+                    textDecoration: "none",
                   }}
                 >
                   Github
@@ -95,6 +97,7 @@ const SectionContact = () => {
                   sx={{
                     ml: "0.5rem",
                     color: "white",
+                    textDecoration: "none",
                   }}
                 >
                   Mail
@@ -116,6 +119,7 @@ const SectionContact = () => {
                   sx={{
                     ml: "0.5rem",
                     color: "white",
+                    textDecoration: "none",
                   }}
                 >
                   Calendly

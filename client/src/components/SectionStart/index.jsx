@@ -26,7 +26,7 @@ const SectionStart = () => {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           justifyContent: { xs: "center", md: "space-between" },
-          alignItems: { xs: "center", md: "unset" },
+          alignItems: { xs: "center", md: "center" },
           pt: "200px",
         }}
       >
@@ -71,6 +71,7 @@ const SectionStart = () => {
               color: theme.palette.text.secondary,
               mb: "1rem",
               fontSize: "1.5rem",
+              textAlign: { xs: "center", md: "start" },
             }}
           >
             Desarrolladora web full stack
@@ -104,8 +105,8 @@ const SectionStart = () => {
 
         <Box
           sx={{
-            width: { xs: "350px", sm: "450px" },
-            mt: { xs: "3rem", md: "" },
+            width: { xs: "350px", sm: "400px", lg: "450px" },
+            mt: { xs: "3rem", md: "0rem" },
           }}
         >
           <CardMedia

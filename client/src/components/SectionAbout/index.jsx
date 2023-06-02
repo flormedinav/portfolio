@@ -8,42 +8,55 @@ const SectionAbout = () => {
   return (
     <Box
       sx={{
-        height: "70vh",
+        height: "100%",
         width: "100%",
         background: theme.palette.background.paper,
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        pb: "6rem",
+        pt: "6rem",
       }}
     >
       <Container
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-between",
           alignItems: "center",
         }}
       >
         <Box
           sx={{
-            height: "100%",
-            borderRadius: "30px",
-            // overflow: "hidden",
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)",
-            borderRadius: "50%",
+            display: "flex",
+            justifyContent: "center",
+            mt: { xs: "3rem", md: "0rem" },
+            order: { xs: "2", md: "-1" },
           }}
         >
+          <Box
+            sx={{
+              width: { xs: "350px", sm: "400px" },
+              height: { xs: "350px", sm: "420px" },
+              // overflow: "hidden",
+              background:
+                "linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(98,217,183,0.2805497198879552) 100%)",
+              borderRadius: "50%",
+              position: "absolute",
+            }}
+          ></Box>
           <CardMedia
             component="img"
             // src={profilePhoto}
             src={profilePhoto2}
             sx={{
-              width: "390px",
-              height: "400px",
+              width: { xs: "320px", sm: "400px" },
+              height: { xs: "350px", sm: "420px" },
+              position: "relative",
             }}
           />
         </Box>
-        <Box sx={{ width: "700px", ml: "5rem" }}>
+        <Box sx={{ width: "auto", ml: { xs: "", md: "5rem" } }}>
           <Box sx={{ mb: "2rem" }}>
             <Title text="Sobre mi" />
           </Box>

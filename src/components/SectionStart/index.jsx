@@ -13,12 +13,13 @@ const SectionStart = () => {
   return (
     <Box
       sx={{
-        height: { xs: "auto", md: "75vh" },
+        height: "100%",
         width: "100%",
         background:
           //   // 'linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.2861519607843137) 100%)',
           "linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(98,217,183,0.20772058823529416) 100%)",
-        pb: "6rem",
+        pt: "13rem",
+        pb: "12rem",
       }}
     >
       <Container
@@ -27,7 +28,6 @@ const SectionStart = () => {
           flexDirection: { xs: "column", md: "row" },
           justifyContent: { xs: "center", md: "space-between" },
           alignItems: { xs: "center", md: "center" },
-          pt: "200px",
         }}
       >
         <Box

@@ -26,24 +26,21 @@ const SectionTech = () => {
   return (
     <Box
       sx={{
-        height: { xs: "auto", md: "55vh" },
+        height: "auto",
         width: "100%",
-        position: "relative",
-        overflow: "hidden",
+        // position: "relative",
+        pb: "6rem",
+        pt: "6rem",
       }}
     >
       <Box
         sx={{
-          position: { xs: "", md: "absolute" },
-          top: 0,
-          left: 0,
+          // position: { xs: "", md: "absolute" },
           height: "100%",
           width: "100%",
         }}
       >
-        <Container
-          sx={{ overflow: "hidden", height: "100%", pt: "6rem", pb: "6rem" }}
-        >
+        <Container sx={{ overflow: "hidden", height: "100%" }}>
           <Title text="tecnologías" />
 
           <Box

@@ -10,12 +10,25 @@ import SectionContact from "../components/SectionContact";
 const HomePage = () => {
   return (
     <Box>
-      <SectionStart />
+      <Box id="inicio">
+        <SectionStart />
+      </Box>
       <SectionImage />
-      <SectionAbout />
-      <SectionTech />
-      <SectionProjects />
-      <SectionContact />
+      <Box id="sobre-mi">
+        <SectionAbout />
+      </Box>
+
+      <Box id="tecnologias">
+        <SectionTech />
+      </Box>
+
+      <Box id="proyectos">
+        <SectionProjects />
+      </Box>
+
+      <Box id="contacto">
+        <SectionContact />
+      </Box>
       <Footer />
     </Box>
   );

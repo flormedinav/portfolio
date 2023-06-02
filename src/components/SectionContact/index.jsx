@@ -38,7 +38,11 @@ const SectionContact = () => {
               flexWrap: "wrap",
             }}
           >
-            <a href="https://www.linkedin.com/in/flormedinav/" target="_back">
+            <a
+              href="https://www.linkedin.com/in/flormedinav/"
+              target="_back"
+              style={{ textDecoration: "none" }}
+            >
               <Button size="large" sx={{ mr: "1rem" }}>
                 <LinkedInIcon
                   sx={{
@@ -55,7 +59,11 @@ const SectionContact = () => {
                 </Typography>
               </Button>
             </a>
-            <a href="https://github.com/flormedinav" target="_back">
+            <a
+              href="https://github.com/flormedinav"
+              target="_back"
+              style={{ textDecoration: "none" }}
+            >
               <Button size="large" sx={{ mr: "1rem" }}>
                 <GitHubIcon
                   sx={{
@@ -72,7 +80,11 @@ const SectionContact = () => {
                 </Typography>
               </Button>
             </a>
-            <a href="mailto:flormedinav7@gmail.com" target="_back">
+            <a
+              href="mailto:flormedinav7@gmail.com"
+              target="_back"
+              style={{ textDecoration: "none" }}
+            >
               <Button size="large" sx={{ mr: "1rem" }}>
                 <MailIcon
                   sx={{
@@ -92,6 +104,7 @@ const SectionContact = () => {
             <a
               href="https://calendly.com/flormedinav/reunion?month=2023-06"
               target="_back"
+              style={{ textDecoration: "none" }}
             >
               <Button size="large" sx={{ mr: "1rem" }}>
                 <CalendarMonthIcon

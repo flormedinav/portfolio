@@ -62,28 +62,28 @@ const NavBarDrawer = ({ open, handleDrawerToggle, handleThemeChange }) => {
     >
       <Box sx={{ p: 2 }}>
         <List sx={{ display: "flex", flexDirection: "column" }}>
-          <Link to="inicio" smooth={true} duration={500}>
+          <Link to="inicio" smooth={true} duration={1000}>
             <ButtonNav text="Inicio" isActive={activeSection === "inicio"} />
           </Link>
-          <Link to="sobre-mi" smooth={true} duration={500}>
+          <Link to="sobre-mi" smooth={true} duration={1000}>
             <ButtonNav
               text="Sobre mi"
               isActive={activeSection === "sobre-mi"}
             />
           </Link>
-          <Link to="tecnologias" smooth={true} duration={500}>
+          <Link to="tecnologias" smooth={true} duration={1000}>
             <ButtonNav
               text="Tecnologías"
               isActive={activeSection === "tecnologias"}
             />
           </Link>
-          <Link to="proyectos" smooth={true} duration={500}>
+          <Link to="proyectos" smooth={true} duration={1000}>
             <ButtonNav
               text="Proyectos"
               isActive={activeSection === "proyectos"}
             />
           </Link>
-          <Link to="contacto" smooth={true} duration={500}>
+          <Link to="contacto" smooth={true} duration={1000}>
             <ButtonNav
               text="Contacto"
               isActive={activeSection === "contacto"}

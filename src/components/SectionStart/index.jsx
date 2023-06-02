@@ -7,6 +7,7 @@ import {
   useTheme,
 } from "@mui/material";
 import imageCodeStart from "../../assets/codeStart.png";
+import { Link } from "react-scroll";
 
 const SectionStart = () => {
   const theme = useTheme();
@@ -77,29 +78,37 @@ const SectionStart = () => {
             Desarrolladora web full stack
           </Typography>
           <Box>
-            <Button
-              variant="contained"
-              size="large"
-              sx={{
-                color: "white",
-                fontWeight: "600",
-                mt: { xs: "3rem", md: "6rem" },
-                mr: "1rem",
-              }}
+            <Link to="contacto" smooth={true} duration={1500}>
+              <Button
+                variant="contained"
+                size="large"
+                sx={{
+                  color: "white",
+                  fontWeight: "600",
+                  mt: { xs: "3rem", md: "6rem" },
+                  mr: "1rem",
+                }}
+              >
+                Contactarme
+              </Button>
+            </Link>
+            <a
+              href="https://drive.google.com/file/d/1AVyAUwZgMjj3c44Lfwt3emOBT_plsOGb/view?usp=sharing"
+              target="_back"
+              style={{ textDecoration: "none" }}
             >
-              Contactarme
-            </Button>
-            <Button
-              variant="outlined"
-              size="large"
-              sx={{
-                color: "white",
-                fontWeight: "600",
-                mt: { xs: "3rem", md: "6rem" },
-              }}
-            >
-              Descargar CV
-            </Button>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  color: "white",
+                  fontWeight: "600",
+                  mt: { xs: "3rem", md: "6rem" },
+                }}
+              >
+                Descargar CV
+              </Button>
+            </a>
           </Box>
         </Box>
 

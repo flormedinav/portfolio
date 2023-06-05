@@ -47,6 +47,7 @@ const SectionStart = () => {
               fontSize: { xs: "4rem", md: "5rem" },
             }}
           >
+            <span style={{ color: theme.palette.primary.main }}>¡</span>
             Hola
             <span style={{ color: theme.palette.primary.main }}>!</span> 👋🏼
           </Typography>
@@ -106,7 +107,7 @@ const SectionStart = () => {
                   mt: { xs: "3rem", md: "6rem" },
                 }}
               >
-                Descargar CV
+                Curriculum Vitae
               </Button>
             </a>
           </Box>

@@ -3,6 +3,7 @@ import {
   Button,
   CardMedia,
   Container,
+  Hidden,
   Paper,
   Typography,
   useTheme,
@@ -12,11 +13,15 @@ import { projects } from "./projects";
 import PaginationComponent from "../Pagination";
 import CardsProjects from "../CardsProjects";
 import { useEffect, useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import styles from "./SectionProjects.module.css";
 
 const SectionProjects = () => {
   const theme = useTheme();
   const projectsPerPage = 2;
   const [currentPage, setCurrentPage] = useState(1);
+  const [imagesLoaded, setImagesLoaded] = useState(false); // Nuevo estado para controlar si se cargaron todas las imágenes
+  const [initialLoadComplete, setInitialLoadComplete] = useState(false);
 
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
@@ -26,6 +31,21 @@ const SectionProjects = () => {
   const endIndex = startIndex + projectsPerPage;
 
   const projectsToShow = projects.slice(startIndex, endIndex);
+
+  const handleImagesLoaded = () => {
+    setImagesLoaded(true);
+  };
+
+  useEffect(() => {
+    setImagesLoaded(false); // Restablecer el estado cuando se cambia de página
+    setInitialLoadComplete(false); // Restablecer el estado de carga inicial
+  }, [currentPage]);
+
+  useEffect(() => {
+    if (!initialLoadComplete && imagesLoaded) {
+      setInitialLoadComplete(true);
+    }
+  }, [imagesLoaded, initialLoadComplete]);
 
   return (
     <Box
@@ -50,24 +70,74 @@ const SectionProjects = () => {
             alignItems: "center",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              justifyContent: "space-between",
-              mb: "1rem",
-            }}
-          >
-            {projectsToShow.map(({ name, img, description, github, tech }) => (
-              <CardsProjects
-                name={name}
-                description={description}
-                img={img}
-                github={github}
-                tech={tech}
-              />
-            ))}
-          </Box>
+          {/* {imagesLoaded ? ( // Mostrar el contenido principal solo cuando las imágenes están cargadas
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                justifyContent: "space-between",
+                mb: "1rem",
+              }}
+            >
+              {projectsToShow.map(
+                ({ name, img, description, github, tech }) => (
+                  <CardsProjects
+                    name={name}
+                    description={description}
+                    img={img}
+                    github={github}
+                    tech={tech}
+                  />
+                )
+              )}
+            </Box>
+          ) : (
+            // Mostrar un indicador de carga mientras las imágenes se cargan
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                my: "2rem",
+                m: "17rem",
+              }}
+            >
+              <CircularProgress />
+            </Box>
+          )} */}
+          {initialLoadComplete ? ( // Mostrar el contenido principal solo cuando se completó la carga inicial
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                justifyContent: "space-between",
+                mb: "1rem",
+              }}
+            >
+              {projectsToShow.map(
+                ({ name, img, description, github, tech }) => (
+                  <CardsProjects
+                    name={name}
+                    description={description}
+                    img={img}
+                    github={github}
+                    tech={tech}
+                  />
+                )
+              )}
+            </Box>
+          ) : (
+            // Mostrar un indicador de carga mientras se carga el contenido inicial
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: { xs: "850px", sm: "640px" },
+              }}
+            >
+              <CircularProgress />
+            </Box>
+          )}
           <PaginationComponent
             currentPage={currentPage}
             handlePageChange={handlePageChange}
@@ -75,6 +145,20 @@ const SectionProjects = () => {
           />
         </Box>
       </Container>
+      <Hidden sx={{ display: "none" }}>
+        {/* Cargar imágenes en un componente oculto para detectar cuando todas las imágenes se hayan cargado */}
+        {projectsToShow.map(({ img }) => (
+          <img
+            className={styles.imgHidden}
+            key={img}
+            src={img}
+            onLoad={handleImagesLoaded}
+            onError={handleImagesLoaded}
+            alt=""
+            // sx={{ display: "none" }}
+          />
+        ))}
+      </Hidden>
     </Box>
   );
 };

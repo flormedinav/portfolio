@@ -125,7 +125,6 @@ const SectionStart = () => {
           <CardMedia
             component="img"
             src={imageCodeStart}
-            // src={profilePhoto2}
             sx={{ width: "100%" }}
           />
         </Box>

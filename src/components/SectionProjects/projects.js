@@ -9,15 +9,15 @@ export const projects = [
   {
     name: "Portfolio",
     img: imagePortfolio,
-    description: "Porfolio personal",
-    github: "https://github.com/flormedinav/Proyecto-Individual-Dogs",
+    description: "Porfolio personal.",
+    github: "https://github.com/flormedinav/portfolio",
     tech: "#HTML5 #CSS3 #Javascript #React.js #Redux #Material UI.",
   },
   {
     name: "Eloleros",
     img: imageEloleros,
     description: "E-commerce. En producción...",
-    github: "https://github.com/flormedinav/Proyecto-Individual-Dogs",
+    github: "https://github.com/flormedinav/e-loleros",
     tech: "#HTML5 #CSS3 #JavaScript #React.js #TanStack Query #Material UI #Node.js #Express.js #PostgreSQL #Sequelize.",
   },
   {
@@ -31,14 +31,14 @@ export const projects = [
     name: "Rick And Morty",
     img: imageRickAndMorty,
     description: "Página de la serie de Rick and Morty.",
-    github: "https://github.com/flormedinav/Proyecto-Individual-Dogs",
+    github: "https://github.com/flormedinav/Rick-and-Morty",
     tech: "HTML5 #CSS3 #JavaScript #React.js #Redux #Node.js #Express.js #PostgreSQL #Sequelize.",
   },
   {
     name: "The Chocolate Hub",
     img: imageChocolate,
     description: "E-commerce de chocolates.",
-    github: "https://github.com/flormedinav/Proyecto-Individual-Dogs",
+    github: "https://github.com/flormedinav/ProyectoFinalHenry",
     tech: "HTML5 #CSS3 #JavaScript #React.js #Redux #Node.js #Express.js #PostgreSQL #Sequelize.",
   },
   {

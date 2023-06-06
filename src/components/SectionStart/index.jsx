@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import imageCodeStart from "../../assets/codeStart.png";
 import { Link } from "react-scroll";
+import styles from "./SectionStart.module.css";
 
 const SectionStart = () => {
   const theme = useTheme();
@@ -32,6 +33,7 @@ const SectionStart = () => {
         }}
       >
         <Box
+          className={styles.focus_in_expand_fwd}
           sx={{
             width: { xs: "100%", md: "50%" },
             display: "flex",
@@ -114,6 +116,7 @@ const SectionStart = () => {
         </Box>
 
         <Box
+          className={styles.breathing_animation}
           sx={{
             width: { xs: "350px", sm: "400px", lg: "450px" },
             mt: { xs: "3rem", md: "0rem" },

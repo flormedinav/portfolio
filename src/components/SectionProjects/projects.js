@@ -1,7 +1,7 @@
 import imageDogsApp from "../../assets/dogsApp2.PNG";
 import imageRickAndMorty from "../../assets/rickAndMorty.png";
 import imageEloleros from "../../assets/inicioEloleros.PNG";
-import imageChocolate from "../../assets/proyectoFinal2.png";
+import imageChocolate from "../../assets/proyectoFinal.png";
 import imagePortfolio from "../../assets/inicioPortfolio.PNG";
 import imageIPhone from "../../assets/inicioIPhone.PNG";
 

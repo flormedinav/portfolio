@@ -119,7 +119,7 @@ const SectionStart = () => {
           className={styles.breathing_animation}
           sx={{
             width: { xs: "350px", sm: "400px", lg: "450px" },
-            mt: { xs: "3rem", md: "0rem" },
+            mt: { xs: "4rem", md: "0rem" },
           }}
         >
           <CardMedia

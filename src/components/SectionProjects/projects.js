@@ -45,7 +45,7 @@ export const projects = [
     name: "iPhone 13",
     img: imageIPhone,
     description: "Página web sobre iPhone 13",
-    github: "https://github.com/flormedinav/Proyecto-Individual-Dogs",
+    github: "https://github.com/flormedinav/iPhone13",
     tech: "HTML5 #CSS3 #JavaScript.",
   },
 ];

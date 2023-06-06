@@ -21,7 +21,7 @@ const SectionProjects = () => {
   const projectsPerPage = 2;
   const [currentPage, setCurrentPage] = useState(1);
   const [imagesLoaded, setImagesLoaded] = useState(false); // Nuevo estado para controlar si se cargaron todas las imágenes
-  const [initialLoadComplete, setInitialLoadComplete] = useState(false);
+  const [initialLoadComplete, setInitialLoadComplete] = useState(true);
 
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
@@ -32,20 +32,20 @@ const SectionProjects = () => {
 
   const projectsToShow = projects.slice(startIndex, endIndex);
 
-  const handleImagesLoaded = () => {
-    setImagesLoaded(true);
-  };
+  // const handleImagesLoaded = () => {
+  //   setImagesLoaded(true);
+  // };
 
-  useEffect(() => {
-    setImagesLoaded(false); // Restablecer el estado cuando se cambia de página
-    setInitialLoadComplete(false); // Restablecer el estado de carga inicial
-  }, [currentPage]);
+  // useEffect(() => {
+  //   setImagesLoaded(false); // Restablecer el estado cuando se cambia de página
+  //   setInitialLoadComplete(false); // Restablecer el estado de carga inicial
+  // }, [currentPage]);
 
-  useEffect(() => {
-    if (!initialLoadComplete && imagesLoaded) {
-      setInitialLoadComplete(true);
-    }
-  }, [imagesLoaded, initialLoadComplete]);
+  // useEffect(() => {
+  //   if (!initialLoadComplete && imagesLoaded) {
+  //     setInitialLoadComplete(true);
+  //   }
+  // }, [imagesLoaded, initialLoadComplete]);
 
   return (
     <Box
@@ -152,8 +152,8 @@ const SectionProjects = () => {
             className={styles.imgHidden}
             key={img}
             src={img}
-            onLoad={handleImagesLoaded}
-            onError={handleImagesLoaded}
+            // onLoad={handleImagesLoaded}
+            // onError={handleImagesLoaded}
             alt=""
             // sx={{ display: "none" }}
           />

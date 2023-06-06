@@ -109,7 +109,7 @@ const SectionStart = () => {
                   mt: { xs: "3rem", md: "6rem" },
                 }}
               >
-                Curriculum Vitae
+                Descargar CV
               </Button>
             </a>
           </Box>

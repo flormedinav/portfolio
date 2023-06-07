@@ -80,11 +80,11 @@ const SectionAbout = () => {
             variant="subtitle1"
             sx={{ mb: "1rem", fontSize: "1.15rem" }}
           >
-            Cuento experiencia en proyectos utilizando tecnologías como{" "}
+            Cuento con experiencia en proyectos utilizando tecnologías como{" "}
             <span
               style={{ color: theme.palette.primary.main, fontWeight: "600" }}
             >
-              JavaScript, React.js, Redux, Node.js, Express y PostgreSQL
+              JavaScript, React.Js, Redux, Node.Js, Express y PostgreSQL
             </span>
             , entre otras.
           </Typography>
@@ -95,7 +95,7 @@ const SectionAbout = () => {
             He participado en la realización de varios proyectos individuales y
             grupales, aplicando la metodología SCRUM con sprints semanales.
             Además de mi experiencia en desarrollo, también he desempeñado el
-            rol de Teaching Assistant en Soy Henry. Estas experiencias me han
+            rol de Teaching Assistant en HENRY. Estas experiencias me han
             permitido desarrollar habilidades de liderazgo, capacidad de escucha
             activa, trabajo en equipo y un fuerte compromiso.
           </Typography>

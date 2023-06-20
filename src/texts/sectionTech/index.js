@@ -19,19 +19,20 @@ export const techFrontend = [
   "HTML5 ",
   "CSS3 ",
   "JavaScript ",
+  "Typescript",
   "React.Js ",
+  "React Native",
   "Redux ",
   "Redux Toolkit ",
   "Material UI ",
   "TanStack Query ",
-  "jQuery ",
-  "AJAX ",
   "Storybook ",
   "Responsive Design",
 ];
 
 export const techBackend = [
   "JavaScript",
+  "Typescript",
   "Node.Js",
   "Express.Js",
   "PostgreSQL",
@@ -42,7 +43,6 @@ export const techBackend = [
   "JavaScript",
   "Node.Js",
   "Express.Js",
-  "PostgreSQL",
 ];
 
 export const tools = [

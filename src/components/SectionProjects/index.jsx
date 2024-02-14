@@ -114,13 +114,14 @@ const SectionProjects = () => {
               }}
             >
               {projectsToShow.map(
-                ({ name, img, description, github, tech }) => (
+                ({ name, img, description, github, tech, demo }) => (
                   <CardsProjects
                     name={name}
                     description={description}
                     img={img}
                     github={github}
                     tech={tech}
+                    demo={demo}
                   />
                 )
               )}

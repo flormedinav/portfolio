@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-const CardsProjects = ({ name, description, img, github, tech }) => {
+const CardsProjects = ({ name, description, img, github, tech, demo }) => {
   const theme = useTheme();
 
   return (
@@ -64,18 +64,40 @@ const CardsProjects = ({ name, description, img, github, tech }) => {
       >
         {tech}
       </Typography>
-      <Button variant="outlined">
-        <a
-          href={github}
-          target="back"
-          style={{
-            textDecoration: "none",
-            color: theme.palette.primary.main,
-          }}
-        >
-          Ir al repositorio ➜
-        </a>
-      </Button>
+      <Box
+        sx={{
+          display: "flex",
+          gap: "1rem",
+        }}
+      >
+        <Button variant="outlined">
+          <a
+            href={github}
+            target="back"
+            style={{
+              textDecoration: "none",
+              color: theme.palette.primary.main,
+            }}
+          >
+            Ir al repositorio ➜
+          </a>
+        </Button>
+
+        {demo && (
+          <Button variant="contained">
+            <a
+              href={demo}
+              target="back"
+              style={{
+                textDecoration: "none",
+                color: "#ffff",
+              }}
+            >
+              Ir a la demo ➜
+            </a>
+          </Button>
+        )}
+      </Box>
     </Box>
   );
 };
